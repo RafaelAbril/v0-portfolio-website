@@ -1,0 +1,52 @@
+[
+  {
+    "title": "izmocars inc.",
+    "img": "/assets/img/izmoltd.png",
+    "description": "Digital Project Manager at izmocars inc."
+  },
+  {
+    "title": "Teamleader",
+    "img": "/assets/img/TeamleaderCRM.jpg",
+    "description": "Customer Success / Product Manager at Teamleader."
+  },
+  {
+    "title": "Wabel",
+    "img": "/assets/img/WabelLogo.png",
+    "description": "Product Manager at Wabel."
+  },
+  {
+    "title": "General Assembly",
+    "img": "/assets/img/GeneralAssembly.png",
+    "description": "Product management course instruction at General Assembly (Client: BNP Paribas)."
+  },
+  {
+    "title": "Nexway",
+    "img": "/assets/img/Nexway.png",
+    "description": "Sr. Product Manager at Nexway."
+  },
+  {
+    "title": "Treezor",
+    "img": "/assets/img/Treezor.png",
+    "description": "Client implementation / Product Manager at Treezor."
+  },
+  {
+    "title": "Publicis Sapient",
+    "img": "/assets/img/PublicisSapient.png",
+    "description": "Sr. Product Manager at Publicis Sapient (Client: EDF & Renault Nissan)."
+  },
+  {
+    "title": "Universign / Signaturit",
+    "img": "/assets/img/Universign.png",
+    "description": "Lead Product Manager at Universign / Signaturit."
+  },
+  {
+    "title": "Citio",
+    "img": "/assets/img/Citio.png",
+    "description": "Lead Product Manager/Engineer at Citio."
+  },
+  {
+    "title": "1P6",
+    "img": "/assets/img/1P6.png",
+    "description": "Head of Product/Engineering at 1P6."
+  }
+]
