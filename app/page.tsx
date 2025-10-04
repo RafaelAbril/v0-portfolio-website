@@ -43,13 +43,13 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:hello@raphael.com"
+                href="mailto:raphael.saintaubert@gmail.com"
                 className="inline-flex items-center justify-center px-8 py-3 bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-lg font-medium transition-colors duration-200"
               >
                 Get in Touch
               </a>
               <a
-                href="https://linkedin.com/in/raphael"
+                href="https://linkedin.com/in/raphael.saintaubert"
                 className="inline-flex items-center justify-center px-8 py-3 border border-primary-foreground/20 hover:bg-primary-foreground/10 rounded-lg font-medium transition-colors duration-200"
               >
                 LinkedIn Profile

@@ -3,39 +3,39 @@ export default function PhotographySection() {
   const photos = [
     {
       id: 1,
-      src: "/urban-architecture-photography.jpg",
-      alt: "Urban architecture photography",
-      title: "Urban Landscapes",
+      src: "/TreeOfLife.jpg",
+      alt: "Urban photography",
+      title: "Suburbs",
     },
     {
       id: 2,
-      src: "/black-and-white-street.png",
-      alt: "Street photography in black and white",
-      title: "Street Stories",
+      src: "/ParisGarnier.jpg",
+      alt: "Parisian street photography",
+      title: "Palais Garnier",
     },
     {
       id: 3,
-      src: "/serene-forest-stream.png",
-      alt: "Nature landscape photography",
-      title: "Natural Beauty",
+      src: "/Montjuic.jpg",
+      alt: "Barcelona Montjuic", // Fixed missing closing quote
+      title: "Montjuïc",
     },
     {
       id: 4,
-      src: "/artistic-portrait.png",
-      alt: "Artistic portrait photography",
-      title: "Human Connection",
+      src: "/NYC.jpg",
+      alt: "Sunset over NYC",
+      title: "NYC",
     },
     {
       id: 5,
-      src: "/abstract-photography-creative.jpg",
+      src: "/ParisLouvre.jpg",
       alt: "Abstract creative photography",
-      title: "Creative Vision",
+      title: "Le Louvre",
     },
     {
       id: 6,
-      src: "/travel-photography-documentary.jpg",
+      src: "/ParisBridge.jpg",
       alt: "Travel documentary photography",
-      title: "World Stories",
+      title: "Paris",
     },
   ]
 
@@ -45,8 +45,7 @@ export default function PhotographySection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Photography</h2>
           <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed">
-            Capturing moments and stories through the lens - exploring the intersection of technology and human
-            experience
+            Capturing moments and stories through my lens:
           </p>
         </div>
 
