@@ -1,3 +1,7 @@
+"use client"
+
+import { useState } from "react"
+
 export default function PhotographySection() {
   // Sample photography data - you can replace with your actual photos
   const photos = [
@@ -16,7 +20,7 @@ export default function PhotographySection() {
     {
       id: 3,
       src: "/Montjuic.jpg",
-      alt: "Barcelona Montjuic", // Fixed missing closing quote
+      alt: "Barcelona Montjuic",
       title: "Montjuïc",
     },
     {
@@ -51,24 +55,7 @@ export default function PhotographySection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {photos.map((photo, idx) => (
-            <div
-              key={photo.id}
-              className="group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-lg transition-all duration-300 animate-fade-in-up opacity-0"
-              style={{ animationDelay: `${idx * 0.1}s` }}
-            >
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={photo.src || "/placeholder.svg"}
-                  alt={photo.alt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-white font-medium text-lg">{photo.title}</h3>
-                </div>
-              </div>
-            </div>
+            <PhotoCard key={photo.id} photo={photo} delay={idx * 0.1} />
           ))}
         </div>
 
@@ -84,5 +71,33 @@ export default function PhotographySection() {
         </div>
       </div>
     </section>
+  )
+}
+
+function PhotoCard({ photo, delay }: { photo: any; delay: number }) {
+  const [isLoading, setIsLoading] = useState(true)
+
+  return (
+    <div
+      className="group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-lg transition-all duration-300 animate-fade-in-up opacity-0"
+      style={{ animationDelay: `${delay}s` }}
+    >
+      <div className="aspect-[4/3] overflow-hidden relative">
+        {isLoading && <div className="absolute inset-0 bg-slate-200 animate-pulse" />}
+        <img
+          src={photo.src || "/placeholder.svg"}
+          alt={photo.alt}
+          className={`w-full h-full object-cover group-hover:scale-105 transition-all duration-500 ${
+            isLoading ? "opacity-0" : "opacity-100"
+          }`}
+          onLoad={() => setIsLoading(false)}
+        />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute bottom-4 left-4 right-4">
+          <h3 className="text-white font-medium text-lg">{photo.title}</h3>
+        </div>
+      </div>
+    </div>
   )
 }
