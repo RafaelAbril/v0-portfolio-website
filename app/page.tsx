@@ -15,8 +15,11 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Professional Journey</h2>
-              <p className="text-lg text-muted max-w-3xl mx-auto leading-relaxed">
-                B2B services & payment services providers - Building digital experiences that drive business growth
+              <p className="text-lg max-w-3xl mx-auto leading-relaxed">
+                B2B services & payment services providers
+              </p>
+              <p className="text-lg max-w-3xl mx-auto leading-relaxed italic">
+                Building digital experiences that drive business growth
               </p>
             </div>
 

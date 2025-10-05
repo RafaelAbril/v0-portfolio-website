@@ -16,8 +16,8 @@ const SkillsSection = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Core Expertise</h2>
-          <p className="text-lg text-muted max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Core Experience</h2>
+          <p className="text-lg max-w-2xl mx-auto">
             A decade of experience across product strategy and technical implementation
           </p>
         </div>

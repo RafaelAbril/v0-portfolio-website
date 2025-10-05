@@ -79,7 +79,7 @@ export default function PhotographySection() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-medium transition-colors duration-200"
           >
-            View More on Instagram
+            View More
           </a>
         </div>
       </div>
