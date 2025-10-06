@@ -1,16 +1,17 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { useState } from "react"
 
-const ProjectCard = ({ title, img, description }) => {
+const ProjectCard = ({ title, img, description, slug }) => {
   const [imgError, setImgError] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
   const placeholderUrl = `/placeholder.svg?height=400&width=600&query=${encodeURIComponent(title + " company logo")}`
 
   const imageSrc = imgError || !img ? placeholderUrl : img
 
-  return (
+  const CardContent = (
     <div className="group bg-card rounded-xl shadow-sm border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
       <div className="relative h-48 overflow-hidden bg-muted">
         {isLoading && <div className="absolute inset-0 bg-slate-200 animate-pulse" />}
@@ -34,8 +35,29 @@ const ProjectCard = ({ title, img, description }) => {
           {title}
         </h3>
         <p className="leading-relaxed">{description}</p>
+        {slug && (
+          <div className="mt-4 flex items-center text-sm font-medium text-primary group-hover:text-accent transition-colors">
+            View Case Study
+            <svg
+              className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        )}
       </div>
     </div>
+  )
+
+  return slug ? (
+    <Link href={`/case-studies/${slug}`} className="block">
+      {CardContent}
+    </Link>
+  ) : (
+    CardContent
   )
 }
 

@@ -9,7 +9,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Raphaël Abril - Product Manager & Digital Experience Designer",
+  title: "Rafael Abril - Product Manager & Digital Experience Designer",
   description:
     "Product Manager with 10+ years of experience in B2B services and payment providers. Specializing in product strategy, frontend engineering, and customer experience.",
   generator: "v0.app",
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
     title: "Raphaël Abril - Product Manager & Digital Experience Designer",
     description:
       "Product Manager with 10+ years of experience in B2B services and payment providers. Specializing in product strategy, frontend engineering, and customer experience.",
-    siteName: "Raphaël Abril Portfolio",
+    siteName: "Rafael Abril Portfolio",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Raphaël Abril - Product Manager Portfolio",
+        alt: "Rafael Abril - Product Manager's Portfolio",
       },
     ],
   },

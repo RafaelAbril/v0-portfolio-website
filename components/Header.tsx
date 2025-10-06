@@ -10,7 +10,7 @@ const Header = () => {
 
         <div className="animate-fade-in-up animate-delay-100 opacity-0">
           <p className="text-xl sm:text-2xl text-slate-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-            I am Raphaël - I have been designing & managing digital experiences for the past 10 years.
+            I am Rafael - I have been designing & managing digital experiences for the past 10 years.
           </p>
         </div>
 

@@ -1,0 +1,176 @@
+[
+  {
+    "id": "xpollens",
+    "slug": "xpollens-banking-platform",
+    "title": "Xpollens",
+    "subtitle": "Lead Product Manager",
+    "period": "2023",
+    "company": "Xpollens",
+    "logo": "/xpollens.jpg",
+    "hero": "/placeholder.svg?height=600&width=1200",
+    "overview": "Led product strategy and development for a next-generation Banking-as-a-Service platform, enabling fintech companies to launch compliant financial products rapidly.",
+    "challenge": "Financial institutions needed a flexible, compliant platform to launch embedded banking products quickly while maintaining regulatory standards and security.",
+    "solution": "Designed and implemented a modular BaaS platform with comprehensive API documentation, white-label capabilities, and automated compliance workflows.",
+    "role": "Lead Product Manager",
+    "responsibilities": [
+      "Defined product vision and roadmap for BaaS platform",
+      "Led cross-functional team of 12 engineers and designers",
+      "Established API-first architecture and developer experience standards",
+      "Implemented agile methodologies and sprint planning processes",
+      "Collaborated with compliance team to ensure regulatory adherence"
+    ],
+    "outcomes": [
+      {
+        "metric": "40%",
+        "description": "Reduction in time-to-market for new financial products"
+      },
+      {
+        "metric": "25+",
+        "description": "Fintech partners onboarded in first year"
+      },
+      {
+        "metric": "99.9%",
+        "description": "Platform uptime maintained"
+      },
+      {
+        "metric": "85%",
+        "description": "Developer satisfaction score"
+      }
+    ],
+    "technologies": ["React", "Node.js", "PostgreSQL", "AWS", "Kubernetes", "REST APIs"],
+    "images": [
+      {
+        "url": "/placeholder.svg?height=400&width=600",
+        "caption": "Real-time analytics dashboard for financial operations"
+      },
+      {
+        "url": "/placeholder.svg?height=400&width=600",
+        "caption": "Comprehensive API documentation portal"
+      },
+      {
+        "url": "/placeholder.svg?height=400&width=600",
+        "caption": "Automated compliance and KYC workflow"
+      }
+    ],
+    "testimonial": {
+      "quote": "Raphaël's strategic vision and execution transformed our platform capabilities, enabling us to scale rapidly while maintaining quality.",
+      "author": "CTO, Xpollens"
+    }
+  },
+  {
+    "id": "citio",
+    "slug": "citio-product-engineering",
+    "title": "Citio",
+    "subtitle": "Lead Product Manager/Engineer",
+    "period": "2023-2024",
+    "company": "Citio",
+    "logo": "/Citio.png",
+    "hero": "/placeholder.svg?height=600&width=1200",
+    "overview": "Bridged product management and engineering to deliver a comprehensive SaaS solution, combining strategic product thinking with hands-on technical implementation.",
+    "challenge": "The company needed to rapidly iterate on product features while maintaining code quality and technical debt under control.",
+    "solution": "Established dual role combining product strategy with frontend engineering, enabling faster decision-making and implementation cycles.",
+    "role": "Lead Product Manager/Engineer",
+    "responsibilities": [
+      "Defined product strategy and technical architecture",
+      "Implemented frontend features using React and TypeScript",
+      "Conducted user research and usability testing",
+      "Managed product backlog and sprint planning",
+      "Collaborated with stakeholders on feature prioritization"
+    ],
+    "outcomes": [
+      {
+        "metric": "60%",
+        "description": "Faster feature delivery through integrated approach"
+      },
+      {
+        "metric": "30%",
+        "description": "Reduction in technical debt"
+      },
+      {
+        "metric": "4.5/5",
+        "description": "Average user satisfaction rating"
+      },
+      {
+        "metric": "15+",
+        "description": "Major features shipped"
+      }
+    ],
+    "technologies": ["React", "TypeScript", "Next.js", "Tailwind CSS", "PostgreSQL", "GraphQL"],
+    "images": [
+      {
+        "url": "/placeholder.svg?height=400&width=600",
+        "caption": "Redesigned user interface with improved UX"
+      },
+      {
+        "url": "/placeholder.svg?height=400&width=600",
+        "caption": "Advanced data visualization components"
+      },
+      {
+        "url": "/placeholder.svg?height=400&width=600",
+        "caption": "Mobile-first responsive design implementation"
+      }
+    ],
+    "testimonial": {
+      "quote": "Having someone who understands both product strategy and technical implementation was invaluable for our growth phase.",
+      "author": "CEO, Citio"
+    }
+  },
+  {
+    "id": "1p6",
+    "slug": "1p6-head-of-product",
+    "title": "1P6",
+    "subtitle": "Head of Product/Engineering",
+    "period": "2024-2025",
+    "company": "1P6",
+    "logo": "/1P6.jpeg",
+    "hero": "/placeholder.svg?height=600&width=1200",
+    "overview": "Led product and engineering teams to build scalable enterprise solutions, establishing processes and culture for sustainable growth.",
+    "challenge": "Scale product development while maintaining quality, establish engineering best practices, and build a high-performing team culture.",
+    "solution": "Implemented comprehensive product development framework, established engineering standards, and built collaborative team culture focused on outcomes.",
+    "role": "Head of Product/Engineering",
+    "responsibilities": [
+      "Led product strategy and engineering operations",
+      "Built and managed cross-functional teams",
+      "Established engineering best practices and code standards",
+      "Defined OKRs and success metrics",
+      "Managed stakeholder relationships and product roadmap"
+    ],
+    "outcomes": [
+      {
+        "metric": "3x",
+        "description": "Team growth while maintaining velocity"
+      },
+      {
+        "metric": "50%",
+        "description": "Improvement in deployment frequency"
+      },
+      {
+        "metric": "90%",
+        "description": "Team satisfaction score"
+      },
+      {
+        "metric": "35%",
+        "description": "Increase in feature adoption rate"
+      }
+    ],
+    "technologies": ["React", "Node.js", "TypeScript", "AWS", "Docker", "CI/CD", "Agile"],
+    "images": [
+      {
+        "url": "/placeholder.svg?height=400&width=600",
+        "caption": "Collaborative team workspace and processes"
+      },
+      {
+        "url": "/placeholder.svg?height=400&width=600",
+        "caption": "Strategic product roadmap and planning"
+      },
+      {
+        "url": "/placeholder.svg?height=400&width=600",
+        "caption": "Engineering metrics and performance tracking"
+      }
+    ],
+    "testimonial": {
+      "quote": "Raphaël's leadership transformed our product development process and team culture, setting us up for long-term success.",
+      "author": "Founder, 1P6"
+    }
+  }
+]

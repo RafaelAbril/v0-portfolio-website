@@ -42,16 +42,19 @@
   {
     "title": "Xpollens",
     "img": "/xpollens.jpg",
-    "description": "2023 - Lead Product Manager at Xpollens."
+    "description": "2023 - Lead Product Manager at Xpollens.",
+    "slug": "xpollens-banking-platform"
   },
   {
     "title": "Citio",
     "img": "/Citio.png",
-    "description": "2023/2024 - Lead Product Manager/Engineer at Citio."
+    "description": "2023/2024 - Lead Product Manager/Engineer at Citio.",
+    "slug": "citio-product-engineering"
   },
   {
     "title": "1P6",
     "img": "/1P6.jpeg",
-    "description": "2024/2025 - Head of Product/Engineering at 1P6."
+    "description": "2024/2025 - Head of Product/Engineering at 1P6.",
+    "slug": "1p6-head-of-product"
   }
 ]
