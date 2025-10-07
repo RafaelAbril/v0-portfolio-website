@@ -16,12 +16,12 @@
     "img": "/xpollens.jpg",
     "description": "2023 - Lead Product Manager at Xpollens.",
     "slug": "xpollens-banking-platform"
-  },  
+  },
   {
     "title": "Universign / Signaturit",
     "img": "/Universign.png",
     "description": "2022 - Lead Product Manager at Universign / Signaturit."
-  },  
+  },
   {
     "title": "Publicis Sapient",
     "img": "/PublicisSapient.png",
@@ -42,7 +42,7 @@
     "img": "/GeneralAssembly.png",
     "description": "2018 - Product management course instruction at General Assembly (Client: BNP Paribas)."
   },
-    {
+  {
     "title": "Teamleader",
     "img": "/TeamleaderCRM.jpg",
     "description": "2016/2017 - Customer Success / Product Manager at Teamleader."
@@ -56,5 +56,5 @@
     "title": "izmocars inc.",
     "img": "/izmoltd.png",
     "description": "2015/2016 - Digital Project Manager at izmocars inc."
-  },
-  ]
+  }
+]
