@@ -1,10 +1,48 @@
 [
   {
-    "title": "izmocars inc.",
-    "img": "/izmoltd.png",
-    "description": "2015/2016 - Digital Project Manager at izmocars inc."
+    "title": "1P6",
+    "img": "/1P6.jpeg",
+    "description": "2024/2025 - Head of Product/Engineering at 1P6.",
+    "slug": "1p6-head-of-product"
   },
   {
+    "title": "Citio",
+    "img": "/Citio.png",
+    "description": "2023/2024 - Lead Product Manager/Engineer at Citio.",
+    "slug": "citio-product-engineering"
+  },
+  {
+    "title": "Xpollens",
+    "img": "/xpollens.jpg",
+    "description": "2023 - Lead Product Manager at Xpollens.",
+    "slug": "xpollens-banking-platform"
+  },  
+  {
+    "title": "Universign / Signaturit",
+    "img": "/Universign.png",
+    "description": "2022 - Lead Product Manager at Universign / Signaturit."
+  },  
+  {
+    "title": "Publicis Sapient",
+    "img": "/PublicisSapient.png",
+    "description": "2022 - Sr. Product Manager at Publicis Sapient (Client: EDF & Renault Nissan)."
+  },
+  {
+    "title": "Treezor",
+    "img": "/Treezor.png",
+    "description": "2021 - Client implementation / Product Manager at Treezor."
+  },
+  {
+    "title": "Nexway",
+    "img": "/Nexway.png",
+    "description": "2019/2020 - Sr. Product Manager at Nexway."
+  },
+  {
+    "title": "General Assembly",
+    "img": "/GeneralAssembly.png",
+    "description": "2018 - Product management course instruction at General Assembly (Client: BNP Paribas)."
+  },
+    {
     "title": "Teamleader",
     "img": "/TeamleaderCRM.jpg",
     "description": "2016/2017 - Customer Success / Product Manager at Teamleader."
@@ -15,46 +53,8 @@
     "description": "2018 - Product Manager at Wabel."
   },
   {
-    "title": "General Assembly",
-    "img": "/GeneralAssembly.png",
-    "description": "2018 - Product management course instruction at General Assembly (Client: BNP Paribas)."
+    "title": "izmocars inc.",
+    "img": "/izmoltd.png",
+    "description": "2015/2016 - Digital Project Manager at izmocars inc."
   },
-  {
-    "title": "Nexway",
-    "img": "/Nexway.png",
-    "description": "2019/2020 - Sr. Product Manager at Nexway."
-  },
-  {
-    "title": "Treezor",
-    "img": "/Treezor.png",
-    "description": "2021 - Client implementation / Product Manager at Treezor."
-  },
-  {
-    "title": "Publicis Sapient",
-    "img": "/PublicisSapient.png",
-    "description": "2022 - Sr. Product Manager at Publicis Sapient (Client: EDF & Renault Nissan)."
-  },
-  {
-    "title": "Universign / Signaturit",
-    "img": "/Universign.png",
-    "description": "2022 - Lead Product Manager at Universign / Signaturit."
-  },
-  {
-    "title": "Xpollens",
-    "img": "/xpollens.jpg",
-    "description": "2023 - Lead Product Manager at Xpollens.",
-    "slug": "xpollens-banking-platform"
-  },
-  {
-    "title": "Citio",
-    "img": "/Citio.png",
-    "description": "2023/2024 - Lead Product Manager/Engineer at Citio.",
-    "slug": "citio-product-engineering"
-  },
-  {
-    "title": "1P6",
-    "img": "/1P6.jpeg",
-    "description": "2024/2025 - Head of Product/Engineering at 1P6.",
-    "slug": "1p6-head-of-product"
-  }
-]
+  ]
