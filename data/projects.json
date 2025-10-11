@@ -23,9 +23,9 @@
     "description": "2022 - Lead Product Manager at Universign / Signaturit."
   },
   {
-    "title": "Publicis Sapient",
+    "title": "Publicis.Sapient",
     "img": "/PublicisSapient.png",
-    "description": "2022 - Sr. Product Manager at Publicis Sapient (Client: EDF & Renault Nissan)."
+    "description": "2022 - Sr. Product Manager at Publicis Sapient (Clients: EDF & Renault Nissan)."
   },
   {
     "title": "Treezor",
@@ -43,14 +43,14 @@
     "description": "2018 - Product management course instruction at General Assembly (Client: BNP Paribas)."
   },
   {
-    "title": "Teamleader",
-    "img": "/TeamleaderCRM.jpg",
-    "description": "2016/2017 - Customer Success / Product Manager at Teamleader."
-  },
-  {
     "title": "Wabel",
     "img": "/WabelLogo.png",
     "description": "2018 - Product Manager at Wabel."
+  },
+  {
+    "title": "Teamleader",
+    "img": "/TeamleaderCRM.jpg",
+    "description": "2016/2017 - Customer Success / Product Manager at Teamleader."
   },
   {
     "title": "izmocars inc.",

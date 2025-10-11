@@ -60,7 +60,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center gap-8">
             {[
               { id: "projects", label: "Experiences" },
-              { id: "skills", label: "Skill set" },
+              { id: "skills", label: "Skillsets" },
               { id: "photography", label: "Photography" },
               { id: "contact", label: "Contact" },
             ].map((item) => (
