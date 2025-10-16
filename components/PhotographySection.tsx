@@ -1,9 +1,11 @@
 "use client"
 
 import { useState } from "react"
+import PhotoLightbox from "./PhotoLightbox"
 
 export default function PhotographySection() {
-  // Sample photography data - you can replace with your actual photos
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null)
+
   const photos = [
     {
       id: 1,
@@ -43,6 +45,18 @@ export default function PhotographySection() {
     },
   ]
 
+  const handleNext = () => {
+    if (selectedPhotoIndex !== null) {
+      setSelectedPhotoIndex((selectedPhotoIndex + 1) % photos.length)
+    }
+  }
+
+  const handlePrev = () => {
+    if (selectedPhotoIndex !== null) {
+      setSelectedPhotoIndex((selectedPhotoIndex - 1 + photos.length) % photos.length)
+    }
+  }
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
       <div className="max-w-6xl mx-auto">
@@ -55,7 +69,7 @@ export default function PhotographySection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {photos.map((photo, idx) => (
-            <PhotoCard key={photo.id} photo={photo} delay={idx * 0.1} />
+            <PhotoCard key={photo.id} photo={photo} delay={idx * 0.1} onClick={() => setSelectedPhotoIndex(idx)} />
           ))}
         </div>
 
@@ -64,22 +78,34 @@ export default function PhotographySection() {
             href="https://www.instagram.com/rafael.abril/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-medium transition-colors duration-200"
+            className="inline-flex items-center justify-center px-8 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-medium transition-all duration-200 hover:scale-105"
           >
-            View More
+            View More on Instagram
           </a>
         </div>
       </div>
+
+      {selectedPhotoIndex !== null && (
+        <PhotoLightbox
+          photo={photos[selectedPhotoIndex]}
+          onClose={() => setSelectedPhotoIndex(null)}
+          onNext={handleNext}
+          onPrev={handlePrev}
+          currentIndex={selectedPhotoIndex}
+          totalPhotos={photos.length}
+        />
+      )}
     </section>
   )
 }
 
-function PhotoCard({ photo, delay }: { photo: any; delay: number }) {
+function PhotoCard({ photo, delay, onClick }: { photo: any; delay: number; onClick: () => void }) {
   const [isLoading, setIsLoading] = useState(true)
 
   return (
-    <div
-      className="group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-lg transition-all duration-300 animate-fade-in-up opacity-0"
+    <button
+      onClick={onClick}
+      className="group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-in-up opacity-0 hover:scale-105 cursor-pointer w-full"
       style={{ animationDelay: `${delay}s` }}
     >
       <div className="aspect-[4/3] overflow-hidden relative">
@@ -87,17 +113,29 @@ function PhotoCard({ photo, delay }: { photo: any; delay: number }) {
         <img
           src={photo.src || "/placeholder.svg"}
           alt={photo.alt}
-          className={`w-full h-full object-cover group-hover:scale-105 transition-all duration-500 ${
+          className={`w-full h-full object-cover group-hover:scale-110 transition-all duration-500 ${
             isLoading ? "opacity-0" : "opacity-100"
           }`}
           onLoad={() => setIsLoading(false)}
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300">
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"
+              />
+            </svg>
+          </div>
+        </div>
         <div className="absolute bottom-4 left-4 right-4">
           <h3 className="text-white font-medium text-lg">{photo.title}</h3>
         </div>
       </div>
-    </div>
+    </button>
   )
 }

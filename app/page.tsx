@@ -15,7 +15,7 @@ export default function Home() {
 
       <main>
         {/* Projects Section */}
-        <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
+        <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 scroll-mt-20">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Professional Journey</h2>
@@ -35,16 +35,16 @@ export default function Home() {
           </div>
         </section>
 
-        <div id="skills">
+        <div id="skills" className="scroll-mt-20">
           <SkillsSection />
         </div>
 
-        <div id="photography">
+        <div id="photography" className="scroll-mt-20">
           <PhotographySection />
         </div>
 
         {/* Contact Section */}
-        <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground">
+        <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground scroll-mt-20">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">Let's Connect</h2>
             <p className="text-xl mb-8 opacity-90 leading-relaxed">
@@ -54,20 +54,20 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
                 <a
                   href="mailto:raphael.saintaubert@gmail.com"
-                  className="inline-flex items-center justify-center px-8 py-3 bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-lg font-medium transition-colors duration-200"
+                  className="inline-flex items-center justify-center px-8 py-3 bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-lg font-medium transition-all duration-200 hover:scale-105"
                 >
                   Get in Touch
                 </a>
                 <a
                   href="https://linkedin.com/in/raphael.saintaubert"
-                  className="inline-flex items-center justify-center px-8 py-3 border border-primary-foreground/20 hover:bg-primary-foreground/10 rounded-lg font-medium transition-colors duration-200"
+                  className="inline-flex items-center justify-center px-8 py-3 border border-primary-foreground/20 hover:bg-primary-foreground/10 rounded-lg font-medium transition-all duration-200 hover:scale-105"
                 >
                   LinkedIn Profile
                 </a>
                 <a
                   href="/resume.pdf"
                   download="Raphael_SaintAubert_Resume.pdf"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-primary-foreground/20 hover:bg-primary-foreground/10 rounded-lg font-medium transition-colors duration-200"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-primary-foreground/20 hover:bg-primary-foreground/10 rounded-lg font-medium transition-all duration-200 hover:scale-105"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -85,7 +85,7 @@ export default function Home() {
                   href="https://www.instagram.com/rafael.abril/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-12 h-12 border border-primary-foreground/20 hover:bg-primary-foreground/10 rounded-lg transition-colors duration-200"
+                  className="inline-flex items-center justify-center w-12 h-12 border border-primary-foreground/20 hover:bg-primary-foreground/10 rounded-lg transition-all duration-200 hover:scale-110"
                   aria-label="Instagram"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -96,7 +96,7 @@ export default function Home() {
                   href="https://linktr.ee/rsaabril"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-12 h-12 border border-primary-foreground/20 hover:bg-primary-foreground/10 rounded-lg transition-colors duration-200"
+                  className="inline-flex items-center justify-center w-12 h-12 border border-primary-foreground/20 hover:bg-primary-foreground/10 rounded-lg transition-all duration-200 hover:scale-110"
                   aria-label="Linktree"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

@@ -24,6 +24,13 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Raphaël Abril" }],
   creator: "Raphaël Abril",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [{ url: "/apple-icon.jpg", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

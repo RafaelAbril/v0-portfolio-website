@@ -12,14 +12,14 @@ const ProjectCard = ({ title, img, description, slug }) => {
   const imageSrc = imgError || !img ? placeholderUrl : img
 
   const CardContent = (
-    <div className="group bg-card rounded-xl shadow-sm border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+    <div className="group bg-card rounded-xl shadow-sm border border-border hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
       <div className="relative h-48 overflow-hidden bg-muted">
         {isLoading && <div className="absolute inset-0 bg-slate-200 animate-pulse" />}
         <Image
           src={imageSrc || "/placeholder.svg"}
           alt={`${title} logo`}
           fill
-          className={`object-cover group-hover:scale-105 transition-all duration-300 ${
+          className={`object-cover group-hover:scale-110 transition-all duration-500 ${
             isLoading ? "opacity-0" : "opacity-100"
           }`}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -27,19 +27,19 @@ const ProjectCard = ({ title, img, description, slug }) => {
           onError={() => setImgError(true)}
           onLoad={() => setIsLoading(false)}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
       <div className="p-6">
         <h3 className="text-xl font-semibold text-card-foreground mb-3 group-hover:text-accent transition-colors duration-200">
           {title}
         </h3>
-        <p className="leading-relaxed">{description}</p>
+        <p className="leading-relaxed text-muted-foreground">{description}</p>
         {slug && (
           <div className="mt-4 flex items-center text-sm font-medium text-primary group-hover:text-accent transition-colors">
             View Case Study
             <svg
-              className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+              className="w-4 h-4 ml-1 group-hover:translate-x-2 transition-transform duration-300"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
