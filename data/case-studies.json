@@ -3,7 +3,7 @@
     "id": "xpollens",
     "slug": "xpollens-banking-platform",
     "title": "Xpollens",
-    "subtitle": "Lead Product Manager - Accounts & Payments",
+    "subtitle": "Lead Product Manager",
     "period": "2023",
     "company": "Xpollens",
     "logo": "/xpollens.jpg",
@@ -14,26 +14,30 @@
     "role": "Lead Product Manager",
     "responsibilities": [
       "Defined product vision and roadmap for BaaS platform",
-      "Led a technical team of 12 engineers",
+      "Led cross-functional team of 12 engineers and designers",
       "Established API-first architecture and developer experience standards",
       "Implemented agile methodologies and sprint planning processes",
-      "Collaborated with compliance team to ensure regulatory adherence & checks"
+      "Collaborated with compliance team to ensure regulatory adherence"
     ],
     "outcomes": [
       {
-        "metric": "45%",
+        "metric": "40%",
         "description": "Reduction in time-to-market for new financial products"
       },
       {
-        "metric": "+",
-        "description": "SEPA gateway implemented for instant payment & money transfers"
+        "metric": "3+",
+        "description": "Fintech partners onboarded in first year"
       },
       {
         "metric": "99.9%",
         "description": "Platform uptime maintained"
       },
+      {
+        "metric": "85%",
+        "description": "Developer satisfaction score"
+      }
     ],
-    "technologies": ["React", "Node.js", ".Net", "Azure", "REST APIs"],
+    "technologies": ["React", "Node.js", "PostgreSQL", "Azure", "REST APIs"],
     "images": [
       {
         "url": "/placeholder.svg?height=400&width=600",
@@ -102,6 +106,10 @@
         "caption": "Mobile-first responsive design implementation"
       }
     ],
+    "testimonial": {
+      "quote": "Having someone who understands both product strategy and technical implementation was invaluable for our growth phase.",
+      "author": "CEO, Citio"
+    }
   },
   {
     "id": "1p6",
