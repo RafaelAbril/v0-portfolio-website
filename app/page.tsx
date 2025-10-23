@@ -19,9 +19,9 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Professional Journey</h2>
-              <p className="text-lg max-w-3xl mx-auto leading-relaxed">B2B services & payment services providers</p>
+              <p className="text-lg max-w-3xl mx-auto leading-relaxed">Building digital experiences that drive business growth,</p>
               <p className="text-lg max-w-3xl mx-auto leading-relaxed italic">
-                Building digital experiences that drive business growth
+                for B2B services & payment services providers
               </p>
             </div>
 
@@ -48,7 +48,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">Let's Connect</h2>
             <p className="text-xl mb-8 opacity-90 leading-relaxed">
-              Interested in discussing product strategy, payments, or any potential collaborations?
+              Interested in discussing product strategy, fintech, or any potential collaborations?
             </p>
             <div className="flex flex-col items-center gap-6">
               <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">

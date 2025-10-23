@@ -1,12 +1,12 @@
 const skills = [
   {
-    category: "Product Strategy",
-    items: ["Product Ownership/Management", "Lean & Agile Methodologies", "Market & Data Research"],
+    category: "Product Management",
+    items: ["Product Ownership & Strategy", "Lean/Agile Methodologies", "Market & Data Research"],
     icon: "📊",
   },
   {
-    category: "Frontend Engineering",
-    items: ["Design", "Customer Experience", "Frontend Development"],
+    category: "Product Engineering",
+    items: ["Design", "Frontend Development","Customer Experience"],
     icon: "💻",
   },
 ]
@@ -16,7 +16,7 @@ const SkillsSection = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Core Experience</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Core Skills</h2>
           <p className="text-lg max-w-2xl mx-auto">
             A decade of experience across product strategy and technical implementation
           </p>
