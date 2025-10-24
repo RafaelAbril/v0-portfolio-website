@@ -51,7 +51,9 @@ export default function ServiceOffering() {
               <div className="mb-6">
                 <div className="flex items-baseline gap-2 mb-4">
                   <span className="text-4xl font-bold text-primary">
-                    ${(service.priceInCents / 100).toLocaleString()}
+                    {Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR" }).format(
+                      service.priceInCents / 100,
+                    )}
                   </span>
                   {service.duration && <span className="text-slate-500">/ {service.duration}</span>}
                 </div>
