@@ -9,9 +9,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Rafael Abril - Product Manager & Digital Experience Designer",
+  title: "Raphaël Saint-Aubert Abril - Sr. Product Manager & Digital Experience Designer",
   description:
-    "Product Manager with 10+ years of experience in B2B services and payment providers. Specializing in product strategy, frontend engineering, and customer experience.",
+    "Sr. Product Manager with 10+ years of experience in B2B services and payment providers. Specializing in product strategy, frontend engineering, and customer experience.",
   generator: "v0.app",
   keywords: [
     "Product Manager",
@@ -19,11 +19,14 @@ export const metadata: Metadata = {
     "Frontend Engineering",
     "Customer Experience",
     "B2B",
+    "BaaS",
     "Payment Providers",
     "Digital Experience",
+    "Fintech",
+    "Financial Services",
   ],
-  authors: [{ name: "Raphaël Abril" }],
-  creator: "Raphaël Abril",
+  authors: [{ name: "Rafael Abril" }],
+  creator: "Rafael Abril",
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
@@ -35,23 +38,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://rafaelabril.com",
-    title: "Raphaël Abril - Product Manager & Digital Experience Designer",
+    title: "Raphaël Saint-Aubert Abril - Sr. Product Manager & Digital Experience Designer",
     description:
-      "Product Manager with 10+ years of experience in B2B services and payment providers. Specializing in product strategy, frontend engineering, and customer experience.",
+      "Sr. Product Manager with 10+ years of experience in B2B services and payment providers. Specializing in product strategy, frontend engineering, and customer experience.",
     siteName: "Rafael Abril Portfolio",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Rafael Abril - Product Manager's Portfolio",
+        alt: "Rafael Abril - Sr. Product Manager's Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Raphaël Abril - Product Manager & Digital Experience Designer",
-    description: "Product Manager with 10+ years of experience in B2B services and payment providers.",
+    title: "Raphaël Saint-Aubert Abril - Sr. Product Manager & Digital Experience Designer",
+    description: "Sr. Product Manager with 10+ years of experience in B2B services and payment providers.",
     images: ["/og-image.jpg"],
   },
   robots: {

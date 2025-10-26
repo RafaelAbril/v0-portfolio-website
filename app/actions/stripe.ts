@@ -15,7 +15,7 @@ export async function createCheckoutSession(serviceId: string) {
     line_items: [
       {
         price_data: {
-          currency: "usd",
+          currency: "eur", // Changed from "usd" to "eur" to match pricing display
           product_data: {
             name: service.name,
             description: service.description,
