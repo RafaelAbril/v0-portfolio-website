@@ -12,7 +12,7 @@ const Navigation = () => {
       setIsVisible(window.scrollY > 100)
 
       // Determine active section
-      const sections = ["projects", "skills", "photography", "contact"]
+      const sections = ["projects", "skills", "services" "photography", "contact"]
       const current = sections.find((section) => {
         const element = document.getElementById(section)
         if (element) {
@@ -61,6 +61,7 @@ const Navigation = () => {
             {[
               { id: "projects", label: "Experiences" },
               { id: "skills", label: "Skillsets" },
+              { id: "services", label: "Services" },
               { id: "photography", label: "Photography" },
               { id: "contact", label: "Contact" },
             ].map((item) => (
