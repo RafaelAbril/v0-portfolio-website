@@ -7,7 +7,7 @@ import { useState } from "react"
 const ProjectCard = ({ title, img, description, slug }) => {
   const [imgError, setImgError] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
-  const placeholderUrl = `/placeholder.svg?height=400&width=600&query=${encodeURIComponent(title + " company logo")}`
+  const placeholderUrl = `/placeholder.svg?height=800&width=1200&query=${encodeURIComponent(title + " company logo professional")}`
 
   const imageSrc = imgError || !img ? placeholderUrl : img
 
@@ -19,13 +19,15 @@ const ProjectCard = ({ title, img, description, slug }) => {
           src={imageSrc || "/placeholder.svg"}
           alt={`${title} logo`}
           fill
-          className={`object-cover group-hover:scale-110 transition-all duration-500 ${
+          className={`object-contain p-6 group-hover:scale-105 transition-all duration-500 ${
             isLoading ? "opacity-0" : "opacity-100"
           }`}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          quality={95}
           unoptimized={imageSrc.startsWith("/placeholder")}
           onError={() => setImgError(true)}
           onLoad={() => setIsLoading(false)}
+          priority={true}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
