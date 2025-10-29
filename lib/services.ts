@@ -34,6 +34,6 @@ export const SERVICES: Service[] = [
       "1-month engagement",
     ],
     priceInCents: 1200000, // 12,000€
-    duration: "1 month",
+    duration: "2 weeks",
   },
 ]
