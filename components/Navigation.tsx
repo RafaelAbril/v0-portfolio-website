@@ -52,7 +52,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="text-lg text-primary hover:text-primary/80 transition-colors"
+            className="text-lg text-bold text-primary hover:text-primary/80 transition-colors"
           >
             Rafael Abril
           </button>
