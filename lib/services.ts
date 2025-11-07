@@ -3,7 +3,7 @@ export interface Service {
   name: string
   description: string
   features: string[]
-  priceInCents: number
+  priceInCents: number | string // Allow string for "To be defined" pricing
   duration?: string
 }
 
@@ -19,7 +19,7 @@ export const SERVICES: Service[] = [
       "Actionable recommendations report",
       "2-week engagement",
     ],
-    priceInCents: 800000, // 8,000€
+    priceInCents: 800000,
     duration: "2 weeks",
   },
   {
@@ -33,7 +33,21 @@ export const SERVICES: Service[] = [
       "Technical documentation",
       "1-month engagement",
     ],
-    priceInCents: 1200000, // 12,000€
-    duration: "2 weeks",
+    priceInCents: 1200000,
+    duration: "1 month",
+  },
+  {
+    id: "tailor-made",
+    name: "Product strategy & payment workflow review",
+    description:
+      "Let's discuss your needs in between product strategy, payment ops & financial workflows",
+    features: [
+      "Tech architecture & processes review",
+      "Integration strategy & data governance",
+      "Development velocity rampup",
+      "Functional & technical documentation",
+    ],
+    priceInCents: "",
+    duration: "",
   },
 ]

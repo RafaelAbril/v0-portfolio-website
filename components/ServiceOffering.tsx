@@ -7,6 +7,17 @@ import Checkout from "./Checkout"
 export default function ServiceOffering() {
   const [selectedService, setSelectedService] = useState<string | null>(null)
 
+  const handleGetStarted = (serviceId: string) => {
+    if (serviceId === "tailor-made") {
+      const contactSection = document.getElementById("contact")
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth", block: "start" })
+      }
+    } else {
+      setSelectedService(serviceId)
+    }
+  }
+
   if (selectedService) {
     return (
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
@@ -27,7 +38,7 @@ export default function ServiceOffering() {
   }
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
+    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Service Offerings</h2>
@@ -36,11 +47,11 @@ export default function ServiceOffering() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {SERVICES.map((service, idx) => (
             <div
               key={service.id}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-200 hover:border-primary/30 animate-fade-in-up opacity-0"
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-200 hover:border-primary/30 animate-fade-in-up opacity-0 flex flex-col"
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
               <div className="mb-6">
@@ -50,16 +61,22 @@ export default function ServiceOffering() {
 
               <div className="mb-6">
                 <div className="flex items-baseline gap-2 mb-4">
-                  <span className="text-4xl font-bold text-primary">
-                    {Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR" }).format(
-                      service.priceInCents / 100,
-                    )}
-                  </span>
-                  {service.duration && <span className="text-slate-500">/ {service.duration}</span>}
+                  {typeof service.priceInCents === "number" ? (
+                    <>
+                      <span className="text-4xl font-bold text-primary">
+                        {Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR" }).format(
+                          service.priceInCents / 100,
+                        )}
+                      </span>
+                      {service.duration && <span className="text-slate-500">/ {service.duration}</span>}
+                    </>
+                  ) : (
+                    <span className="text-2xl font-bold text-primary">{service.priceInCents}</span>
+                  )}
                 </div>
               </div>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8 flex-grow">
                 {service.features.map((feature, featureIdx) => (
                   <li key={featureIdx} className="flex items-start gap-3">
                     <svg
@@ -76,10 +93,10 @@ export default function ServiceOffering() {
               </ul>
 
               <button
-                onClick={() => setSelectedService(service.id)}
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-6 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg"
+                onClick={() => handleGetStarted(service.id)}
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-6 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg mt-auto"
               >
-                Get Started
+                {service.id === "tailor-made" ? "Contact Me" : "Get Started"}
               </button>
             </div>
           ))}
