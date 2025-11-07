@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import PhotoLightbox from "./PhotoLightbox"
 
 export default function PhotographySection() {
@@ -110,13 +111,16 @@ function PhotoCard({ photo, delay, onClick }: { photo: any; delay: number; onCli
     >
       <div className="aspect-[4/3] overflow-hidden relative">
         {isLoading && <div className="absolute inset-0 bg-slate-200 animate-pulse" />}
-        <img
+        <Image
           src={photo.src || "/placeholder.svg"}
           alt={photo.alt}
+          width={800}
+          height={600}
           className={`w-full h-full object-cover group-hover:scale-110 transition-all duration-500 ${
             isLoading ? "opacity-0" : "opacity-100"
           }`}
           onLoad={() => setIsLoading(false)}
+          priority={delay < 0.3}
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
