@@ -1,6 +1,6 @@
 [
   {
-    "title": "1P6",
+    "title": "1POINT6",
     "img": "/1P6.jpeg",
     "description": "2024/2025 - Head of Product/Ops at 1P6.",
     "accomplishments": ["Leading product strategy for fintech platform", "Managing a cross-functional engineering team"],
@@ -32,8 +32,8 @@
   {
     "title": "Publicis.Sapient",
     "img": "/PublicisSapient.png",
-    "description": "2022 - Sr. Product Manager at Publicis Sapient (Clients: EDF & Renault Nissan).",
-    "accomplishments": ["Delivered enterprise solutions for CAC40 clients"],
+    "description": "2022 - Sr. Product Manager at Publicis Sapient.",
+    "accomplishments": ["Delivered enterprise solutions for EDF & Renault Nissan"],
     "tags": ["Enterprise", "Consulting", "Agile"]
   },
   {
@@ -61,7 +61,7 @@
     "title": "Wabel",
     "img": "/WabelLogo.png",
     "description": "2018 - Product Manager at Wabel.",
-    "accomplishments": ["Built influencer marketing platform", "Grew user base to 10,000+ creators"],
+    "accomplishments": ["Increased development velocity", "Grew user base to thousands of sourcers & providers"],
     "tags": ["Product Marketing", "Platform", "Data"]
   },
   {
