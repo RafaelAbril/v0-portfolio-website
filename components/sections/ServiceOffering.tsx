@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { SERVICES } from "@/lib/services"
-import Checkout from "./Checkout"
+import Checkout from "../Checkout"
 
 export default function ServiceOffering() {
   const [selectedService, setSelectedService] = useState<string | null>(null)

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import PhotoLightbox from "./PhotoLightbox"
+import PhotoLightbox from "../PhotoLightbox"
 
 export default function PhotographySection() {
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null)
@@ -116,9 +116,8 @@ function PhotoCard({ photo, delay, onClick }: { photo: any; delay: number; onCli
           alt={photo.alt}
           width={800}
           height={600}
-          className={`w-full h-full object-cover group-hover:scale-110 transition-all duration-500 ${
-            isLoading ? "opacity-0" : "opacity-100"
-          }`}
+          className={`w-full h-full object-cover group-hover:scale-110 transition-all duration-500 ${isLoading ? "opacity-0" : "opacity-100"
+            }`}
           onLoad={() => setIsLoading(false)}
           priority={delay < 0.3}
         />

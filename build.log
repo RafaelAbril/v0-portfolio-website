@@ -1,0 +1,27 @@
+
+> my-v0-project@0.1.0 build
+> next build
+
+   ▲ Next.js 15.2.4
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/9) ...
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+Error: NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY is not set
+    at 58210 (/Users/rafaelabril/Desktop/v0-redesign/v0-portfolio-website/.next/server/app/page.js:3:64121)
+    at Object.t [as require] (/Users/rafaelabril/Desktop/v0-redesign/v0-portfolio-website/.next/server/webpack-runtime.js:1:127)
+    at require (/Users/rafaelabril/Desktop/v0-redesign/v0-portfolio-website/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:133:10079)
+    at u (/Users/rafaelabril/Desktop/v0-redesign/v0-portfolio-website/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:92:646)
+    at U (/Users/rafaelabril/Desktop/v0-redesign/v0-portfolio-website/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:92:10492)
+    at T (/Users/rafaelabril/Desktop/v0-redesign/v0-portfolio-website/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:92:8541)
+    at rI (/Users/rafaelabril/Desktop/v0-redesign/v0-portfolio-website/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:76:33106)
+    at nq (/Users/rafaelabril/Desktop/v0-redesign/v0-portfolio-website/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:76:65205)
+    at nH (/Users/rafaelabril/Desktop/v0-redesign/v0-portfolio-website/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:76:65009)
+    at nV (/Users/rafaelabril/Desktop/v0-redesign/v0-portfolio-website/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:76:70865)
+Export encountered an error on /page: /, exiting the build.
+ ⨯ Next.js build worker exited with code: 1 and signal: null

@@ -1,8 +1,8 @@
 import { getCheckoutSession } from "@/app/actions/stripe"
 import Link from "next/link"
 
-export default async function PaymentReturn({ searchParams }: { searchParams: { session_id: string } }) {
-  const sessionId = searchParams.session_id
+export default async function PaymentReturn({ searchParams }: { searchParams: Promise<{ session_id: string }> }) {
+  const { session_id: sessionId } = await searchParams
 
   if (!sessionId) {
     return (

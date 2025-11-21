@@ -2,10 +2,10 @@ import Header from "../components/Header"
 import Navigation from "../components/Navigation"
 import BackToTop from "../components/BackToTop"
 import ProjectCard from "../components/ProjectCard"
-import SkillsSection from "../components/SkillsSection"
-import PhotographySection from "../components/PhotographySection"
-import ServiceOffering from "../components/ServiceOffering" // Import ServiceOffering component
-import projects from "../data/projects.json"
+import SkillsSection from "../components/sections/SkillsSection"
+import PhotographySection from "../components/sections/PhotographySection"
+import ServiceOffering from "../components/sections/ServiceOffering" // Import ServiceOffering component
+import projects from "../data/projects"
 
 export default function Home() {
   return (
