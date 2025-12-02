@@ -18,16 +18,16 @@ const skills = [
 ]
 
 const companyLogos = [
-  "Vercel",
-  "Stripe",
-  "Next.js",
-  "React",
-  "TypeScript",
-  "Tailwind",
-  "Figma",
-  "Linear",
-  "Notion",
-  "Slack",
+  "izmocars ltd.",
+  "Teamleader.eu",
+  "Wabel",
+  "Roche",
+  "General Assembly",
+  "Nexway",
+  "Treezor",
+  "Publicis",
+  "Xpollens",
+  "1POINT6",
 ]
 
 const SkillsSection = () => {
@@ -57,7 +57,7 @@ const SkillsSection = () => {
         </div>
 
         <div className="mb-16 overflow-hidden">
-          <p className="text-center text-sm text-muted-foreground mb-6">Trusted by leading companies</p>
+          <p className="text-center text-sm text-muted-foreground mb-6">Trusted by leading fintech & B2B companies</p>
           <div className="marquee-mask">
             <div className="flex gap-8 animate-marquee">
               {[...companyLogos, ...companyLogos].map((company, idx) => (

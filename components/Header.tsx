@@ -47,8 +47,9 @@ const Header = () => {
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <div className={`animate-scroll-fade ${isVisible ? "" : "invisible"}`}>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight text-balance">
-            {animateText("Hello world, you're welcome here.", 0)}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
+            <span className="block whitespace-nowrap">{animateText("Hello world,", 0)}</span>
+            <span className="block whitespace-nowrap">{animateText("you're welcome here.", 0.4)}</span>
           </h1>
         </div>
 
