@@ -4,6 +4,15 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect, useRef } from "react"
 
+/**
+ * @param {Object} props
+ * @param {string} props.title
+ * @param {string} [props.img]
+ * @param {string} props.description
+ * @param {string} [props.slug]
+ * @param {string[]} [props.accomplishments]
+ * @param {string[]} [props.tags]
+ */
 const ProjectCard = ({ title, img, description, slug, accomplishments = [], tags = [] }) => {
   const [imgError, setImgError] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
@@ -49,9 +58,8 @@ const ProjectCard = ({ title, img, description, slug, accomplishments = [], tags
     <div
       ref={cardRef}
       onMouseMove={handleMouseMove}
-      className={`flashlight-effect flashlight-border group bg-card rounded-xl shadow-sm border border-border hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden ${
-        isVisible ? "animate-scroll-fade" : "invisible"
-      }`}
+      className={`flashlight-effect flashlight-border group bg-card rounded-xl shadow-sm border border-border hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden ${isVisible ? "animate-scroll-fade" : "invisible"
+        }`}
     >
       <div className="relative h-48 overflow-hidden bg-muted">
         {isLoading && <div className="absolute inset-0 bg-slate-200 animate-pulse" />}
@@ -59,9 +67,8 @@ const ProjectCard = ({ title, img, description, slug, accomplishments = [], tags
           src={imageSrc || "/placeholder.svg"}
           alt={`${title} logo`}
           fill
-          className={`object-contain p-6 group-hover:scale-110 transition-all duration-700 ${
-            isLoading ? "opacity-0" : "opacity-100"
-          }`}
+          className={`object-contain p-6 group-hover:scale-110 transition-all duration-700 ${isLoading ? "opacity-0" : "opacity-100"
+            }`}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           quality={95}
           unoptimized={imageSrc.startsWith("/placeholder")}
