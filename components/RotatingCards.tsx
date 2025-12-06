@@ -4,17 +4,17 @@ import { useState } from "react"
 
 const cards = [
   {
-    title: "Product Strategy",
+    title: "Product Strategy:",
     description: "Defining vision, roadmap, and go-to-market strategies for B2B and fintech products",
     icon: "",
   },
   {
-    title: "Technical Leadership",
+    title: "Technical Leadership:",
     description: "Leading engineering teams and driving technical decisions for scalable solutions",
     icon: "",
   },
   {
-    title: "User-Centric Design",
+    title: "User-Centric Design:",
     description: "Creating intuitive experiences through research, testing, and iterative improvements",
     icon: "",
   },

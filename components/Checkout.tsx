@@ -4,19 +4,13 @@ import { EmbeddedCheckoutProvider, EmbeddedCheckout } from "@stripe/react-stripe
 import { loadStripe } from "@stripe/stripe-js"
 import { createCheckoutSession } from "@/app/actions/stripe"
 
-const stripeKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-const stripePromise = stripeKey ? loadStripe(stripeKey) : null
+if (!process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY) {
+  throw new Error("NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY is not set")
+}
+
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
 
 export default function Checkout({ serviceId }: { serviceId: string }) {
-  if (!stripePromise) {
-    console.warn("NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY is not set")
-    return (
-      <div className="p-4 text-amber-600 bg-amber-50 rounded-md border border-amber-200 text-sm">
-        Checkout is currently disabled (Configuration missing)
-      </div>
-    )
-  }
-
   return (
     <div className="w-full">
       <EmbeddedCheckoutProvider
