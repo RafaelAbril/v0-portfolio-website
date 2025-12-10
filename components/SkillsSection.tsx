@@ -7,12 +7,12 @@ import { useRef, useState } from "react"
 const skills = [
   {
     category: "Product Management",
-    items: ["Product Ownership & Strategy", "Lean/Agile Methodologies", "Market & Data Research"],
+    items: ["Product Ownership & Strategy", "Lean/Agile Methodologies implementation", "Market & Data Research", "Go-to-Market"],
     icon: "📊",
   },
   {
     category: "Product Engineering",
-    items: ["Design", "Frontend Development", "Customer Experience"],
+    items: ["Design", "Frontend Development", "Customer Experience & Analytics", "Prototyping"],
     icon: "💻",
   },
 ]

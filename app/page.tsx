@@ -69,7 +69,7 @@ export default function Home() {
                   Get in Touch
                 </a>
                 <a
-                  href="https://linkedin.com/in/raphael.saintaubert"
+                  href="https://linkedin.com/in/raphaelsaintaubert"
                   className="inline-flex items-center justify-center px-8 py-3 border border-primary-foreground/20 hover:bg-primary-foreground/10 rounded-lg font-medium transition-all duration-200 hover:scale-105"
                 >
                   LinkedIn Profile
