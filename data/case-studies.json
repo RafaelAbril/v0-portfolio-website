@@ -7,7 +7,7 @@
     "period": "2023",
     "company": "Xpollens",
     "logo": "/xpollens.jpg",
-    "hero": "/placeholder.svg?height=600&width=1200",
+    "hero": "/xpollens-dashboard.png",
     "overview": "Led product strategy and development for a next-generation Banking-as-a-Service platform, enabling fintech companies to launch compliant financial products rapidly.",
     "challenge": "Financial institutions needed a flexible, compliant platform to launch embedded banking products quickly while maintaining regulatory standards and security.",
     "solution": "Designed and implemented a modular BaaS platform with comprehensive API documentation, white-label capabilities, and automated compliance workflows.",
@@ -37,21 +37,7 @@
         "description": "Developer satisfaction score"
       }
     ],
-    "technologies": ["React", "Node.js", "PostgreSQL", "Azure", "REST APIs"],
-    "images": [
-      {
-        "url": "/placeholder.svg?height=400&width=600",
-        "caption": "Real-time analytics dashboard for financial operations"
-      },
-      {
-        "url": "/placeholder.svg?height=400&width=600",
-        "caption": "Comprehensive API documentation portal"
-      },
-      {
-        "url": "/placeholder.svg?height=400&width=600",
-        "caption": "Automated compliance and KYC workflow"
-      }
-    ]
+    "technologies": ["React", "Node.js", "PostgreSQL", "Azure", "REST APIs"]
   },
   {
     "id": "citio",
@@ -61,7 +47,7 @@
     "period": "2023-2024",
     "company": "Citio",
     "logo": "/Citio.png",
-    "hero": "/placeholder.svg?height=600&width=1200",
+    "hero": "/citio-dashboard.png",
     "overview": "Bridged product management and engineering to deliver a comprehensive SaaS solution, combining strategic product thinking with hands-on technical implementation.",
     "challenge": "The company needed to rapidly iterate on product features while maintaining code quality and technical debt under control.",
     "solution": "Established dual role combining product strategy with frontend engineering, enabling faster decision-making and implementation cycles.",
@@ -91,25 +77,7 @@
         "description": "Major features shipped"
       }
     ],
-    "technologies": ["React", "TypeScript", "Next.js", "Tailwind CSS", "PostgreSQL", "GraphQL"],
-    "images": [
-      {
-        "url": "/placeholder.svg?height=400&width=600",
-        "caption": "Redesigned user interface with improved UX"
-      },
-      {
-        "url": "/placeholder.svg?height=400&width=600",
-        "caption": "Advanced data visualization components"
-      },
-      {
-        "url": "/placeholder.svg?height=400&width=600",
-        "caption": "Mobile-first responsive design implementation"
-      }
-    ],
-    "testimonial": {
-      "quote": "Having someone who understands both product strategy and technical implementation was invaluable for our growth phase.",
-      "author": "CEO, Citio"
-    }
+    "technologies": ["React", "TypeScript", "Next.js", "Tailwind CSS", "PostgreSQL", "GraphQL"]
   },
   {
     "id": "1p6",

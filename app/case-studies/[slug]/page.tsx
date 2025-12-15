@@ -68,12 +68,14 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
       {/* Hero Image */}
       <section className="px-4 sm:px-6 lg:px-8 -mt-8">
         <div className="max-w-6xl mx-auto">
-          <div className="relative w-full h-96 rounded-xl overflow-hidden shadow-2xl">
+          <div className="relative w-full h-[500px] rounded-xl overflow-hidden shadow-2xl">
             <Image
               src={caseStudy.hero || "/placeholder.svg"}
               alt={`${caseStudy.title} hero`}
               fill
               className="object-cover"
+              quality={95}
+              priority
             />
           </div>
         </div>
@@ -151,28 +153,6 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
               >
                 {tech}
               </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Images Gallery */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-primary mb-12 text-center">Project Highlights</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudy.images.map((image, index) => (
-              <div key={index} className="group">
-                <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-lg mb-4">
-                  <Image
-                    src={image.url || "/placeholder.svg"}
-                    alt={image.caption}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <p className="text-sm text-slate-600 text-center">{image.caption}</p>
-              </div>
             ))}
           </div>
         </div>
