@@ -1,0 +1,110 @@
+{
+  "name": "Portfolio: Market Monitor",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "days"
+            }
+          ]
+        }
+      },
+      "name": "Schedule",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://serpapi.com/search",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "q",
+              "value": "site:linkedin.com/jobs \"fractional head of product\" OR \"BaaS Engineering Lead\""
+            },
+            {
+              "name": "api_key",
+              "value": "YOUR_SERPAPI_KEY"
+            }
+          ]
+        }
+      },
+      "name": "SerpApi Lookup",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "return $json.organic_results.map(item => ({ json: { title: item.title, link: item.link, snippet: item.snippet } }));"
+      },
+      "name": "Extract Jobs",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "databaseId": "YOUR_NOTION_DB_ID",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Job Title|title",
+              "value": "={{$json.title}}"
+            },
+            {
+              "key": "Link|url",
+              "value": "={{$json.link}}"
+            }
+          ]
+        }
+      },
+      "name": "Notion",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 1,
+      "position": [850, 300]
+    }
+  ],
+  "connections": {
+    "Schedule": {
+      "main": [
+        [
+          {
+            "node": "SerpApi Lookup",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SerpApi Lookup": {
+      "main": [
+        [
+          {
+            "node": "Extract Jobs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Jobs": {
+      "main": [
+        [
+          {
+            "node": "Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {}
+}

@@ -1,0 +1,112 @@
+{
+  "name": "Portfolio: Inbound Lead Enricher",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "portfolio-contact",
+        "options": {}
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "operation": "enrich",
+        "email": "={{$json.body.email}}"
+      },
+      "name": "Clearbit",
+      "type": "n8n-nodes-base.clearbit",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.industry}}",
+              "operation": "contains",
+              "value2": "Fintech"
+            }
+          ]
+        }
+      },
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "text": "=🚀 New Lead from {{$node[\"Webhook\"].json[\"body\"][\"name\"]}} at {{$json[\"name\"]}}\\nMessage: {{$node[\"Webhook\"].json[\"body\"][\"message\"]}}"
+      },
+      "name": "Slack",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [900, 200]
+    },
+    {
+      "parameters": {
+        "toEmail": "={{$node[\"Webhook\"].json[\"body\"][\"email\"]}}",
+        "subject": "Thanks for reaching out!",
+        "text": "=Hi {{$node[\"Webhook\"].json[\"body\"][\"name\"]}},\\n\\nThanks for contacting me via my portfolio. I'll get back to you shortly.\\n\\nBest,\\nRafael",
+        "options": {}
+      },
+      "name": "Gmail",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [1150, 200]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Clearbit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Clearbit": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "Slack",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack": {
+      "main": [
+        [
+          {
+            "node": "Gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {}
+}

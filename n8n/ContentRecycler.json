@@ -1,0 +1,105 @@
+{
+  "name": "Portfolio: Content Recycler",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks"
+            }
+          ]
+        }
+      },
+      "name": "Schedule",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://raw.githubusercontent.com/RafaelAbril/v0-portfolio-website/main/data/case-studies.json",
+        "options": {}
+      },
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst randomIndex = Math.floor(Math.random() * items.length);\nreturn [items[randomIndex]];"
+      },
+      "name": "Pick Random Case Study",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "prompt": "=Write a professional LinkedIn post about this case study: {{JSON.stringify($json)}}. Focus on the challenge and solution. Keep it under 200 words. Include 3 relevant hashtags."
+      },
+      "name": "OpenAI",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1,
+      "position": [850, 300]
+    },
+    {
+      "parameters": {
+        "text": "=Draft LinkedIn Post:\\n\\n{{$json.message.content}}\\n\\n[Approve/Reject logic can be added here with interactive blocks]"
+      },
+      "name": "Slack Request Approval",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [1050, 300]
+    }
+  ],
+  "connections": {
+    "Schedule": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Pick Random Case Study",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pick Random Case Study": {
+      "main": [
+        [
+          {
+            "node": "OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "main": [
+        [
+          {
+            "node": "Slack Request Approval",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {}
+}
