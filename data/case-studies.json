@@ -1,5 +1,33 @@
 [
   {
+    "id": "totalenergies",
+    "slug": "totalenergies-cloud-apiplatform",
+    "title": "TotalEnergies",
+    "subtitle": "Cloud & API Platform Product Manager",
+    "period": "2023",
+    "company": "TotalEnergies",
+    "logo": "/xpollens.jpg",
+    "hero": "",
+    "overview": "Led product strategy and development for a next-generation Banking-as-a-Service platform, enabling fintech companies to launch compliant financial products rapidly.",
+    "challenge": "Financial institutions needed a flexible, compliant platform to launch embedded banking products quickly while maintaining regulatory standards and security.",
+    "solution": "Designed and implemented a modular BaaS platform with comprehensive API documentation, white-label capabilities, and automated compliance workflows.",
+    "role": "Cloud & API Platform Product Manager",
+    "responsibilities": [
+      "Defined product vision and roadmap for BaaS platform",
+      "Led cross-functional team of 12 engineers and designers",
+      "Established API-first architecture and developer experience standards",
+      "Implemented agile methodologies and sprint planning processes",
+      "Collaborated with compliance team to ensure regulatory adherence"
+    ],
+    "technologies": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Azure",
+      "REST APIs"
+    ]
+  },
+  {
     "id": "xpollens",
     "slug": "xpollens-banking-platform",
     "title": "Xpollens",
@@ -37,7 +65,13 @@
         "description": "Developer satisfaction score"
       }
     ],
-    "technologies": ["React", "Node.js", "PostgreSQL", "Azure", "REST APIs"]
+    "technologies": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Azure",
+      "REST APIs"
+    ]
   },
   {
     "id": "citio",
@@ -77,7 +111,14 @@
         "description": "Major features shipped"
       }
     ],
-    "technologies": ["React", "TypeScript", "Next.js", "Tailwind CSS", "PostgreSQL", "GraphQL"]
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "GraphQL"
+    ]
   },
   {
     "id": "1p6",
@@ -118,7 +159,14 @@
         "description": "Product team members hired and mentored"
       }
     ],
-    "technologies": ["React", "Node.js", "AWS", "PostgreSQL", "Stripe API", "REST APIs"],
+    "technologies": [
+      "React",
+      "Node.js",
+      "AWS",
+      "PostgreSQL",
+      "Stripe API",
+      "REST APIs"
+    ],
     "images": [
       {
         "url": "/placeholder.svg?height=400&width=600",
