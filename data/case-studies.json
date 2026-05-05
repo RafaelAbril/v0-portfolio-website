@@ -6,23 +6,23 @@
     "subtitle": "Cloud & API Platform Product Manager",
     "period": "2023",
     "company": "TotalEnergies",
-    "logo": "/xpollens.jpg",
+    "logo": "/totalenergies.jpg",
     "hero": "",
-    "overview": "Led product strategy and development for a next-generation Banking-as-a-Service platform, enabling fintech companies to launch compliant financial products rapidly.",
-    "challenge": "Financial institutions needed a flexible, compliant platform to launch embedded banking products quickly while maintaining regulatory standards and security.",
-    "solution": "Designed and implemented a modular BaaS platform with comprehensive API documentation, white-label capabilities, and automated compliance workflows.",
+    "overview": "Led product strategy and development for a next-generation Cloud & API platform, enabling technical projects to scale rapidly.",
+    "challenge": "Flexible, compliant platform to launch embedded products quickly while maintaining regulatory standards and security.",
+    "solution": "Designed and implemented a multi-cloud platform with comprehensive API documentation, white-label capabilities, and automated deployment workflows.",
     "role": "Cloud & API Platform Product Manager",
     "responsibilities": [
       "Defined product vision and roadmap for BaaS platform",
-      "Led cross-functional team of 12 engineers and designers",
+      "Led cross-functional team of 10 engineers and designers",
       "Established API-first architecture and developer experience standards",
       "Implemented agile methodologies and sprint planning processes",
-      "Collaborated with compliance team to ensure regulatory adherence"
+      "Collaborated with SRE, AIOps & FinOps teams to ensure regulatory adherence"
     ],
     "technologies": [
-      "React",
-      "Node.js",
-      "PostgreSQL",
+      "Kubernetes",
+      "AWS",
+      "Terraform",
       "Azure",
       "REST APIs"
     ]
