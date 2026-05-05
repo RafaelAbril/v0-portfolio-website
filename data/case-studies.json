@@ -25,7 +25,25 @@
       "Terraform",
       "Azure",
       "REST APIs"
-    ]
+    ],
+    "outcomes": [
+      {
+        "metric": "25%",
+        "description": "Reduction in time-to-market for new products"
+      },
+      {
+        "metric": "Up to 3.6M API calls/day",
+        "description": "Infrastructure redesign & cost optimization"
+      },
+      {
+        "metric": "99.9%",
+        "description": "Platform uptime maintained"
+      },
+      {
+        "metric": "85%",
+        "description": "Developer satisfaction score"
+      }
+    ],
   },
   {
     "id": "xpollens",
