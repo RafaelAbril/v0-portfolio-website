@@ -11,7 +11,7 @@ const ProjectCard = ({ title, img, description, slug, accomplishments = [], tags
   const cardRef = useRef(null)
 
   const imageSrc = imgError || !img
-    ? `/placeholder.svg?height=800&width=1200&query=${encodeURIComponent(title + " company logo")}`
+    ? `/placeholder.svg`
     : img
 
   useEffect(() => {
