@@ -4,13 +4,23 @@ import { EmbeddedCheckoutProvider, EmbeddedCheckout } from "@stripe/react-stripe
 import { loadStripe } from "@stripe/stripe-js"
 import { createCheckoutSession } from "@/app/actions/stripe"
 
-if (!process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY) {
-  throw new Error("NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY is not set")
+let stripePromise: Promise<any> | null = null;
+
+if (process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY) {
+  stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+} else {
+  console.warn("NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY is not set");
 }
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
-
 export default function Checkout({ serviceId }: { serviceId: string }) {
+  if (!stripePromise) {
+    return (
+      <div className="w-full p-4 border border-red-200 bg-red-50 text-red-600 rounded-md">
+        Payment system is currently unavailable (Stripe configuration missing).
+      </div>
+    );
+  }
+
   return (
     <div className="w-full">
       <EmbeddedCheckoutProvider
