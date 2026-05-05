@@ -2,6 +2,7 @@
   {
     "title": "TotalEnergies",
     "img": "/totalenergies.jpg",
+    "slug": "totalenergies-cloud-apiplatform",
     "description": "2026 - Platform Product Manager at TotalEnergies.",
     "accomplishments": [
       "Leading product strategy & delivery for cloud & API platform",
@@ -16,6 +17,7 @@
   {
     "title": "1POINT6",
     "img": "/1P6.jpeg",
+    "slug": "1p6-head-of-product",
     "description": "2024/2025 - Head of Product/Ops at 1P6.",
     "accomplishments": [
       "Leading product strategy for fintech platform",
