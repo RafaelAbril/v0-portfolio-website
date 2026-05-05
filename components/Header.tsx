@@ -38,9 +38,8 @@ const Header = () => {
 
         {/* Giant display heading */}
         <h1
-          className={`text-display mb-8 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`text-display mb-8 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
           style={{
             fontFamily: "var(--font-heading, 'Archivo', sans-serif)",
             fontSize: "clamp(3.2rem, 9vw, 8.5rem)",
@@ -51,7 +50,7 @@ const Header = () => {
             transitionDelay: "80ms",
           }}
         >
-          Raphaël
+          Rafael
           <br />
           <span style={{ color: "#0369A1" }}>Abril.</span>
         </h1>
@@ -64,9 +63,8 @@ const Header = () => {
 
         {/* Descriptor */}
         <p
-          className={`text-xl sm:text-2xl max-w-2xl leading-relaxed text-[#334155] mb-10 transition-all duration-500 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
+          className={`text-xl sm:text-2xl max-w-2xl leading-relaxed text-[#334155] mb-10 transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
           style={{
             fontFamily: "var(--font-body, 'Space Grotesk', sans-serif)",
             fontWeight: 400,
@@ -80,9 +78,8 @@ const Header = () => {
 
         {/* CTAs */}
         <div
-          className={`flex flex-wrap gap-3 transition-all duration-500 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
+          className={`flex flex-wrap gap-3 transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
           style={{ transitionDelay: "360ms" }}
         >
           <a
@@ -108,14 +105,13 @@ const Header = () => {
 
         {/* Stat pills */}
         <div
-          className={`flex flex-wrap gap-6 mt-14 pt-8 border-t border-[#E2E8F0] transition-all duration-500 ${
-            isVisible ? "opacity-100" : "opacity-0"
-          }`}
+          className={`flex flex-wrap gap-6 mt-14 pt-8 border-t border-[#E2E8F0] transition-all duration-500 ${isVisible ? "opacity-100" : "opacity-0"
+            }`}
           style={{ transitionDelay: "480ms" }}
         >
           {[
             { value: "10+", label: "Years Experience" },
-            { value: "11",  label: "Companies" },
+            { value: "11", label: "Companies" },
             { value: "B2B", label: "& Fintech Focus" },
           ].map(({ value, label }) => (
             <div key={label}>
