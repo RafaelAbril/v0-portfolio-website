@@ -184,20 +184,6 @@
       "PostgreSQL",
       "Stripe API",
       "REST APIs"
-    ],
-    "images": [
-      {
-        "url": "/placeholder.svg?height=400&width=600",
-        "caption": "Payment analytics and reporting dashboard"
-      },
-      {
-        "url": "/placeholder.svg?height=400&width=600",
-        "caption": "Mobile payment application interface"
-      },
-      {
-        "url": "/placeholder.svg?height=400&width=600",
-        "caption": "Merchant management portal"
-      }
     ]
   }
 ]
