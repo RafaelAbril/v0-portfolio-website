@@ -43,8 +43,8 @@
         "metric": "85%",
         "description": "Developer satisfaction score"
       }
-    ],
-  },
+    ]
+  }
   {
     "id": "xpollens",
     "slug": "xpollens-banking-platform",
