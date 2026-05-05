@@ -98,23 +98,19 @@ const ProjectCard = ({ title, img, description, slug, accomplishments = [], tags
         )}
 
         {slug && (
-          <div className="flex items-center gap-1 text-xs font-semibold text-[#0369A1] group-hover:gap-2 transition-all duration-200 mt-3"
+          <Link href={`/case-studies/${slug}`} className="inline-flex items-center gap-1 text-xs font-semibold text-[#0369A1] group-hover:gap-2 transition-all duration-200 mt-3"
             style={{ fontFamily: "var(--font-body, 'Space Grotesk', sans-serif)", letterSpacing: "0.04em", textTransform: "uppercase" }}>
             Case Study
             <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
             </svg>
-          </div>
+          </Link>
         )}
       </div>
     </div>
   )
 
-  return slug ? (
-    <Link href={`/case-studies/${slug}`} className="block" aria-label={`View ${title} case study`}>
-      {inner}
-    </Link>
-  ) : inner
+  return inner
 }
 
 export default ProjectCard
