@@ -5,9 +5,9 @@ import Link from "next/link"
 import { useState, useEffect, useRef } from "react"
 
 const ProjectCard = ({ title, img, description, slug, accomplishments = [], tags = [] }) => {
-  const [imgError, setImgError]     = useState(false)
-  const [isLoading, setIsLoading]   = useState(true)
-  const [isVisible, setIsVisible]   = useState(false)
+  const [imgError, setImgError] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const [isVisible, setIsVisible] = useState(false)
   const cardRef = useRef(null)
 
   const imageSrc = imgError || !img
@@ -37,9 +37,8 @@ const ProjectCard = ({ title, img, description, slug, accomplishments = [], tags
           src={imageSrc}
           alt={`${title} logo`}
           fill
-          className={`object-contain p-6 transition-all duration-500 group-hover:scale-105 ${
-            isLoading ? "opacity-0" : "opacity-100"
-          }`}
+          className={`object-contain p-6 transition-all duration-500 group-hover:scale-105 ${isLoading ? "opacity-0" : "opacity-100"
+            }`}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           quality={90}
           unoptimized={imageSrc.startsWith("/placeholder")}
