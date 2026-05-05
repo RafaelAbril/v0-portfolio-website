@@ -5,126 +5,104 @@ import Link from "next/link"
 import { useState, useEffect, useRef } from "react"
 
 const ProjectCard = ({ title, img, description, slug, accomplishments = [], tags = [] }) => {
-  const [imgError, setImgError] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
-  const [isVisible, setIsVisible] = useState(false)
+  const [imgError, setImgError]     = useState(false)
+  const [isLoading, setIsLoading]   = useState(true)
+  const [isVisible, setIsVisible]   = useState(false)
   const cardRef = useRef(null)
 
-  const placeholderUrl = `/placeholder.svg?height=800&width=1200&query=${encodeURIComponent(title + " company logo professional")}`
-  const imageSrc = imgError || !img ? placeholderUrl : img
+  const imageSrc = imgError || !img
+    ? `/placeholder.svg?height=800&width=1200&query=${encodeURIComponent(title + " company logo")}`
+    : img
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 },
+      ([entry]) => { if (entry.isIntersecting) setIsVisible(true) },
+      { threshold: 0.08 }
     )
-
-    if (cardRef.current) {
-      observer.observe(cardRef.current)
-    }
-
-    return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current)
-      }
-    }
+    if (cardRef.current) observer.observe(cardRef.current)
+    return () => { if (cardRef.current) observer.unobserve(cardRef.current) }
   }, [])
 
-  const handleMouseMove = (e) => {
-    if (!cardRef.current) return
-
-    const rect = cardRef.current.getBoundingClientRect()
-    const x = ((e.clientX - rect.left) / rect.width) * 100
-    const y = ((e.clientY - rect.top) / rect.height) * 100
-
-    cardRef.current.style.setProperty("--mouse-x", `${x}%`)
-    cardRef.current.style.setProperty("--mouse-y", `${y}%`)
-  }
-
-  const CardContent = (
+  const inner = (
     <div
       ref={cardRef}
-      onMouseMove={handleMouseMove}
-      className={`flashlight-effect flashlight-border group bg-card rounded-xl shadow-sm border border-border hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden ${
-        isVisible ? "animate-scroll-fade" : "invisible"
-      }`}
+      className={`card-minimal group overflow-hidden ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
     >
-      <div className="relative h-48 overflow-hidden bg-muted">
-        {isLoading && <div className="absolute inset-0 bg-slate-200 animate-pulse" />}
+      {/* Logo area */}
+      <div className="relative h-40 bg-[#F8FAFC] border-b border-[#E2E8F0] overflow-hidden">
+        {isLoading && (
+          <div className="absolute inset-0 bg-[#E8ECF1] animate-pulse" />
+        )}
         <Image
-          src={imageSrc || "/placeholder.svg"}
+          src={imageSrc}
           alt={`${title} logo`}
           fill
-          className={`object-contain p-6 group-hover:scale-110 transition-all duration-700 ${
+          className={`object-contain p-6 transition-all duration-500 group-hover:scale-105 ${
             isLoading ? "opacity-0" : "opacity-100"
           }`}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          quality={95}
+          quality={90}
           unoptimized={imageSrc.startsWith("/placeholder")}
           onError={() => setImgError(true)}
           onLoad={() => setIsLoading(false)}
-          priority={true}
+          priority={false}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
+      {/* Content */}
       <div className="p-6">
-        <h3 className="text-xl font-semibold text-card-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+        <h3
+          className="mb-1 group-hover:text-[#0369A1] transition-colors duration-200"
+          style={{
+            fontFamily: "var(--font-heading, 'Archivo', sans-serif)",
+            fontWeight: 700,
+            fontSize: "1.125rem",
+            letterSpacing: "-0.02em",
+            color: "#0F172A",
+          }}
+        >
           {title}
         </h3>
-        <p className="leading-relaxed text-muted-foreground mb-4">{description}</p>
+
+        <p
+          className="mb-4 text-sm leading-relaxed"
+          style={{ color: "#64748B", fontFamily: "var(--font-body, 'Space Grotesk', sans-serif)" }}
+        >
+          {description}
+        </p>
 
         {accomplishments.length > 0 && (
-          <ul className="space-y-2 mb-4">
-            {accomplishments.map((accomplishment, index) => (
-              <li
-                key={index}
-                className="flex items-start text-sm text-slate-600 group-hover:text-slate-700 transition-colors duration-300"
-              >
+          <ul className="space-y-1.5 mb-4">
+            {accomplishments.map((a, i) => (
+              <li key={i} className="flex items-start gap-2 text-sm text-[#334155]">
                 <svg
-                  className="w-4 h-4 mr-2 mt-0.5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform duration-300"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
+                  width="14" height="14"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  className="flex-shrink-0 mt-0.5 text-[#0369A1]"
+                  aria-hidden="true"
                 >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="leading-tight">{accomplishment}</span>
+                <span>{a}</span>
               </li>
             ))}
           </ul>
         )}
 
         {tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag, index) => (
-              <span
-                key={index}
-                className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full border border-primary/20 group-hover:bg-primary/20 group-hover:scale-105 transition-all duration-300"
-              >
-                {tag}
-              </span>
+          <div className="flex flex-wrap gap-1.5 mb-4">
+            {tags.map((tag, i) => (
+              <span key={i} className="tag-pill">{tag}</span>
             ))}
           </div>
         )}
 
         {slug && (
-          <div className="mt-4 flex items-center text-sm font-medium text-primary group-hover:text-accent transition-colors">
-            View Case Study
-            <svg
-              className="w-4 h-4 ml-1 group-hover:translate-x-2 transition-transform duration-300"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          <div className="flex items-center gap-1 text-xs font-semibold text-[#0369A1] group-hover:gap-2 transition-all duration-200 mt-3"
+            style={{ fontFamily: "var(--font-body, 'Space Grotesk', sans-serif)", letterSpacing: "0.04em", textTransform: "uppercase" }}>
+            Case Study
+            <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
             </svg>
           </div>
         )}
@@ -133,12 +111,10 @@ const ProjectCard = ({ title, img, description, slug, accomplishments = [], tags
   )
 
   return slug ? (
-    <Link href={`/case-studies/${slug}`} className="block">
-      {CardContent}
+    <Link href={`/case-studies/${slug}`} className="block" aria-label={`View ${title} case study`}>
+      {inner}
     </Link>
-  ) : (
-    CardContent
-  )
+  ) : inner
 }
 
 export default ProjectCard

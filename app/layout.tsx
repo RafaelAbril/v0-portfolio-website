@@ -1,18 +1,26 @@
 import type React from "react"
-import { Inter } from "next/font/google"
+import { Archivo, Space_Grotesk } from "next/font/google"
 import type { Metadata } from "next"
 import "./globals.css"
 
-const inter = Inter({
+const archivo = Archivo({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-archivo",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+})
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 })
 
 export const metadata: Metadata = {
-  title: "Raphaël Saint-Aubert Abril - Sr. Product Manager & Digital Experience Designer",
+  title: "Raphaël Saint-Aubert Abril — Sr. Product Manager & Digital Experience Designer",
   description:
     "Sr. Product Manager with 10+ years of experience in B2B services and payment providers. Specializing in product strategy, frontend engineering, and customer experience.",
-  generator: "v0.app",
   keywords: [
     "Product Manager",
     "Product Strategy",
@@ -25,8 +33,8 @@ export const metadata: Metadata = {
     "Fintech",
     "Financial Services",
   ],
-  authors: [{ name: "Rafael Abril" }],
-  creator: "Rafael Abril",
+  authors: [{ name: "Raphaël Saint-Aubert Abril" }],
+  creator: "Raphaël Saint-Aubert Abril",
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
@@ -38,23 +46,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://rafaelabril.com",
-    title: "Raphaël Saint-Aubert Abril - Sr. Product Manager & Digital Experience Designer",
+    title: "Raphaël Saint-Aubert Abril — Sr. Product Manager & Digital Experience Designer",
     description:
-      "Sr. Product Manager with 10+ years of experience in B2B services and payment providers. Specializing in product strategy, frontend engineering, and customer experience.",
+      "Sr. Product Manager with 10+ years of experience in B2B services and payment providers.",
     siteName: "Rafael Abril Portfolio",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Rafael Abril - Sr. Product Manager's Portfolio",
+        alt: "Rafael Abril — Sr. Product Manager Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Raphaël Saint-Aubert Abril - Sr. Product Manager & Digital Experience Designer",
-    description: "Sr. Product Manager with 10+ years of experience in B2B services and payment providers.",
+    title: "Raphaël Saint-Aubert Abril — Sr. Product Manager",
+    description: "Sr. Product Manager with 10+ years in B2B services and payment providers.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -70,14 +78,13 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
-      <body className="min-h-screen bg-background text-foreground antialiased">{children}</body>
+    <html lang="en" className={`${archivo.variable} ${spaceGrotesk.variable}`}>
+      <body className="min-h-screen bg-background text-foreground antialiased"
+        style={{ fontFamily: "var(--font-space-grotesk, 'Space Grotesk', system-ui, sans-serif)" }}>
+        {children}
+      </body>
     </html>
   )
 }
