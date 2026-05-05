@@ -112,7 +112,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           <p className="text-xl text-slate-700 mb-6">{caseStudy.role}</p>
           <h3 className="text-xl font-semibold text-slate-800 mb-4">Key Responsibilities</h3>
           <ul className="space-y-3">
-            {caseStudy.responsibilities.map((responsibility, index) => (
+            {caseStudy.responsibilities?.map((responsibility, index) => (
               <li key={index} className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                   <path
@@ -129,26 +129,28 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       </section>
 
       {/* Outcomes */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Key Outcomes</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {caseStudy.outcomes.map((outcome, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl sm:text-5xl font-bold mb-2">{outcome.metric}</div>
-                <div className="text-sm opacity-90">{outcome.description}</div>
-              </div>
-            ))}
+      {caseStudy.outcomes && caseStudy.outcomes.length > 0 && (
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold mb-12 text-center">Key Outcomes</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {caseStudy.outcomes.map((outcome, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-4xl sm:text-5xl font-bold mb-2">{outcome.metric}</div>
+                  <div className="text-sm opacity-90">{outcome.description}</div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-primary mb-6">Technologies Used</h2>
           <div className="flex flex-wrap gap-3">
-            {caseStudy.technologies.map((tech, index) => (
+            {caseStudy.technologies?.map((tech, index) => (
               <span
                 key={index}
                 className="px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200"
