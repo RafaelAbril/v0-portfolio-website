@@ -111,7 +111,7 @@ const Header = () => {
         >
           {[
             { value: "10+", label: "Years Experience" },
-            { value: "11", label: "Companies" },
+            { value: "12", label: "Companies" },
             { value: "B2B", label: "& Fintech Focus" },
           ].map(({ value, label }) => (
             <div key={label}>
