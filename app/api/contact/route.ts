@@ -1,10 +1,9 @@
 import { NextResponse } from "next/server"
 
-// Cargo Webhook URL should be stored in .env.local
-// e.g., CARGO_WEBHOOK_URL="https://hooks.getcargo.ai/v1/..."
-const CARGO_WEBHOOK_URL = process.env.CARGO_WEBHOOK_URL
-
 export async function POST(request: Request) {
+  // Cargo Webhook URL must be evaluated at runtime, inside the handler
+  const CARGO_WEBHOOK_URL = process.env.CARGO_WEBHOOK_URL
+
   try {
     const body = await request.json()
     const { name, email, company, message, utm_source, utm_medium, utm_campaign } = body
