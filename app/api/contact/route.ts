@@ -16,17 +16,16 @@ export async function POST(request: Request) {
       )
     }
 
-    // Payload to send to Cargo
-    const payload = {
+    // Payload to send to Cargo - strictly matching the verified schema
+    const payload: any = {
       name,
       email,
-      company: company || "",
       message,
-      utm_source: utm_source || "",
-      utm_medium: utm_medium || "",
-      utm_campaign: utm_campaign || "",
-      source: "portfolio_contact_form",
-      submitted_at: new Date().toISOString(),
+    }
+    
+    // Only include company if provided, to avoid schema rejection
+    if (company) {
+      payload.company = company
     }
 
     // If Cargo webhook is configured, forward the data
