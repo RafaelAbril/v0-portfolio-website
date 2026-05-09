@@ -20,9 +20,10 @@ export async function POST(request: Request) {
     const payload: any = {
       name,
       email,
+      company,
       message,
     }
-    
+
     // Only include company if provided, to avoid schema rejection
     if (company) {
       payload.company = company
