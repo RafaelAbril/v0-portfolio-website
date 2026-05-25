@@ -16,16 +16,14 @@ export async function POST(request: Request) {
       )
     }
 
-    // Payload to send to Cargo - Try different format with fields property
+    // Payload to send to Cargo - Ensure all values are strings
     const cargoPayload = {
       records: [
         {
-          fields: {
-            name,
-            email,
-            company: company || "",
-            message
-          }
+          name: String(name),
+          email: String(email),
+          company: company ? String(company) : "",
+          message: String(message)
         }
       ]
     }
@@ -33,14 +31,16 @@ export async function POST(request: Request) {
     // If Cargo webhook is configured, forward the data
     if (CARGO_WEBHOOK_URL) {
       try {
-        console.log("Sending to Cargo:", CARGO_WEBHOOK_URL, cargoPayload)
+        const payloadString = JSON.stringify(cargoPayload)
+        console.log("Sending to Cargo:", CARGO_WEBHOOK_URL)
+        console.log("Payload:", payloadString)
         
         const cargoResponse = await fetch(CARGO_WEBHOOK_URL, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(cargoPayload),
+          body: payloadString,
         })
 
         console.log("Cargo response status:", cargoResponse.status)
