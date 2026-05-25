@@ -16,30 +16,29 @@ export async function POST(request: Request) {
       )
     }
 
-    // Payload to send to Cargo - strictly matching the verified schema
-    const payload: any = {
-      name,
-      email,
-      company,
-      message
-    }
-
-    // Only include company if provided, to avoid schema rejection
-    if (company) {
-      payload.company = company
+    // Payload to send to Cargo - API expects a "records" array
+    const cargoPayload = {
+      records: [
+        {
+          name,
+          email,
+          company: company || null,
+          message
+        }
+      ]
     }
 
     // If Cargo webhook is configured, forward the data
     if (CARGO_WEBHOOK_URL) {
       try {
-        console.log("Sending to Cargo:", CARGO_WEBHOOK_URL, payload)
+        console.log("Sending to Cargo:", CARGO_WEBHOOK_URL, cargoPayload)
         
         const cargoResponse = await fetch(CARGO_WEBHOOK_URL, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(payload),
+          body: JSON.stringify(cargoPayload),
         })
 
         console.log("Cargo response status:", cargoResponse.status)
@@ -58,7 +57,7 @@ export async function POST(request: Request) {
       }
     } else {
       // For development/testing before Cargo is set up
-      console.warn("CARGO_WEBHOOK_URL is not set. Payload would have been:", payload)
+      console.warn("CARGO_WEBHOOK_URL is not set. Payload would have been:", cargoPayload)
     }
 
     return NextResponse.json(
