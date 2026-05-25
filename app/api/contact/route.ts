@@ -21,7 +21,7 @@ export async function POST(request: Request) {
       name,
       email,
       company,
-      message,
+      message
     }
 
     // Only include company if provided, to avoid schema rejection
