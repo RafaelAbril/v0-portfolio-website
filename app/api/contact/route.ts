@@ -16,14 +16,16 @@ export async function POST(request: Request) {
       )
     }
 
-    // Payload to send to Cargo - API expects a "records" array
+    // Payload to send to Cargo - Try different format with fields property
     const cargoPayload = {
       records: [
         {
-          name,
-          email,
-          company: company || null,
-          message
+          fields: {
+            name,
+            email,
+            company: company || "",
+            message
+          }
         }
       ]
     }
