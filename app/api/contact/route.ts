@@ -32,6 +32,8 @@ export async function POST(request: Request) {
     // If Cargo webhook is configured, forward the data
     if (CARGO_WEBHOOK_URL) {
       try {
+        console.log("Sending to Cargo:", CARGO_WEBHOOK_URL, payload)
+        
         const cargoResponse = await fetch(CARGO_WEBHOOK_URL, {
           method: "POST",
           headers: {
@@ -40,10 +42,16 @@ export async function POST(request: Request) {
           body: JSON.stringify(payload),
         })
 
+        console.log("Cargo response status:", cargoResponse.status)
+        const responseText = await cargoResponse.text()
+        console.log("Cargo response body:", responseText)
+
         if (!cargoResponse.ok) {
-          console.error("Failed to forward to Cargo:", await cargoResponse.text())
+          console.error("Failed to forward to Cargo. Status:", cargoResponse.status, "Body:", responseText)
           // Depending on requirements, we might still want to return success to the user 
           // even if forwarding failed, but log it for debugging.
+        } else {
+          console.log("Successfully forwarded to Cargo")
         }
       } catch (err) {
         console.error("Error communicating with Cargo webhook:", err)
