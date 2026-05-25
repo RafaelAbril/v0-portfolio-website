@@ -17,13 +17,16 @@ export async function POST(request: Request) {
     }
 
     // Payload to send to Cargo - Ensure all values are strings
+    const timestamp = new Date().toISOString()
     const cargoPayload = {
       records: [
         {
+          id: `contact_${Date.now()}`,
           name: String(name),
           email: String(email),
           company: company ? String(company) : "",
-          message: String(message)
+          message: String(message),
+          created_at: timestamp
         }
       ]
     }
