@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect, useRef } from "react"
 
-const ProjectCard = ({ title, img, description, slug, accomplishments = [], tags = [] }) => {
+const ProjectCard = ({ title, img, description, slug = "", accomplishments = [], tags = [] }) => {
   const [imgError, setImgError] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
   const [isVisible, setIsVisible] = useState(false)

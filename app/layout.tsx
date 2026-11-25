@@ -18,6 +18,8 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rafaelabril.com"),
+  alternates: { canonical: "/" },
   title: "Raphaël Saint-Aubert Abril — Sr. Product Manager & Digital Experience Designer",
   description:
     "Sr. Product Manager with 10+ years of experience in B2B services and payment providers. Specializing in product strategy, frontend engineering, and customer experience.",
@@ -83,6 +85,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${archivo.variable} ${spaceGrotesk.variable}`}>
       <body className="min-h-screen bg-background text-foreground antialiased"
         style={{ fontFamily: "var(--font-space-grotesk, 'Space Grotesk', system-ui, sans-serif)" }}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Raphaël Saint-Aubert Abril",
+              jobTitle: "Sr. Product Manager",
+              url: "https://rafaelabril.com",
+              sameAs: [
+                "https://linkedin.com/in/raphaelsaintaubert",
+                "https://github.com/RafaelAbril",
+              ],
+            }),
+          }}
+        />
         {children}
       </body>
     </html>

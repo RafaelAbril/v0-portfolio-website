@@ -32,6 +32,7 @@ export default function ContactForm() {
       email: formData.get("email"),
       company: formData.get("company"),
       message: formData.get("message"),
+      website: formData.get("website"),
       utm_source: utmSource,
       utm_medium: utmMedium,
       utm_campaign: utmCampaign,
@@ -143,6 +144,11 @@ export default function ContactForm() {
           className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent text-white placeholder-white/30 transition-all resize-none"
           placeholder="How can we work together?"
         />
+      </div>
+
+      <div aria-hidden="true" style={{ position: "absolute", left: "-10000px", width: 1, height: 1, overflow: "hidden" }}>
+        <label htmlFor="website">Website</label>
+        <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
 
       <button
