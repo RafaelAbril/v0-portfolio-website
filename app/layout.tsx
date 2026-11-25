@@ -1,6 +1,7 @@
 import type React from "react"
 import { Archivo, Space_Grotesk } from "next/font/google"
 import type { Metadata } from "next"
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 const archivo = Archivo({
@@ -102,6 +103,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   )
