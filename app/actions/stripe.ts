@@ -11,6 +11,10 @@ export async function createCheckoutSession(serviceId: string) {
     throw new Error("Service not found")
   }
 
+  if (typeof service.priceInCents !== "number" || !Number.isInteger(service.priceInCents) || service.priceInCents <= 0) {
+    throw new Error("Service is not available for checkout")
+  }
+
   const headersList = await headers()
   const host = headersList.get("host") || "localhost:3000"
   const protocol = host.includes("localhost") ? "http" : "https"
